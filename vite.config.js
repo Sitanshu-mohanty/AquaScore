@@ -1,8 +1,12 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
-// Update this with your GitHub repo name
 export default defineConfig({
   plugins: [react()],
-  base: '/AquaScore/',
-});
+  base: '/aquascore/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+    sourcemap: false
+  }
+})
